@@ -1,165 +1,206 @@
 <!doctype html>
 <html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b1020">
-  <meta name="description" content="Huihui 的个人网站 — Developer, Builder, Explorer.">
-  <title>Huihui · Personal Website</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="bg-grid" aria-hidden="true"></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b1020" />
+    <meta
+      name="description"
+      content="Huihui 的个人网站 — Developer, Builder, Explorer."
+    />
+    <title>Huihui · Personal Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-grid" aria-hidden="true"></div>
 
-  <header class="nav">
-    <a class="brand" href="#top" aria-label="Huihui home">
-      <span class="brand-mark">H</span>
-      <span>huihui</span>
-    </a>
-    <nav class="nav-links" aria-label="主导航">
-      <a href="#about">关于</a>
-      <a href="#projects">项目</a>
-      <a href="#skills">能力</a>
-      <a href="#contact">联系</a>
-    </nav>
-    <a class="nav-github" href="https://github.com/Suian13" target="_blank" rel="noreferrer">GitHub ↗</a>
-  </header>
+    <header class="nav">
+      <a class="brand" href="#top" aria-label="Huihui home">
+        <span class="brand-mark">H</span>
+        <span>huihui</span>
+      </a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="#about">关于</a>
+        <a href="#projects">项目</a>
+        <a href="#skills">能力</a>
+        <a href="#contact">联系</a>
+      </nav>
+      <a
+        class="nav-github"
+        href="https://github.com/Suian13"
+        target="_blank"
+        rel="noreferrer"
+        >GitHub ↗</a
+      >
+    </header>
 
-  <main id="top">
-    <section class="hero section">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="pulse"></span> HELLO, WORLD</p>
-        <h1>把想法，<br><span>做成真正能用的东西。</span></h1>
-        <p class="hero-text">
-          Hi, I'm Huihui. 我喜欢软件开发、AI 与数字技术，
-          也喜欢把复杂的问题拆开，做成简单、可靠、好用的产品。
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="#projects">看看我的项目 <span>↓</span></a>
-          <a class="button secondary" href="https://github.com/Suian13" target="_blank" rel="noreferrer">访问 GitHub ↗</a>
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="pulse"></span> HELLO, WORLD</p>
+          <h1>把想法，<br /><span>做成真正能用的东西。</span></h1>
+          <p class="hero-text">
+            Hi, I'm Huihui. 我喜欢软件开发、AI 与数字技术，
+            也喜欢把复杂的问题拆开，做成简单、可靠、好用的产品。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects"
+              >看看我的项目 <span>↓</span></a
+            >
+            <a
+              class="button secondary"
+              href="https://github.com/Suian13"
+              target="_blank"
+              rel="noreferrer"
+              >访问 GitHub ↗</a
+            >
+          </div>
         </div>
-      </div>
 
-      <div class="hero-card" aria-label="个人简介卡片">
-        <div class="orb orb-one"></div>
-        <div class="orb orb-two"></div>
-        <div class="avatar">H</div>
-        <div class="card-name">Huihui</div>
-        <div class="card-role">Developer · Builder · Explorer</div>
-        <div class="card-line"></div>
-        <div class="card-meta">
-          <span>Based online</span>
-          <span>● Available</span>
+        <div class="hero-card" aria-label="个人简介卡片">
+          <div class="orb orb-one"></div>
+          <div class="orb orb-two"></div>
+          <div class="avatar">H</div>
+          <div class="card-name">Huihui</div>
+          <div class="card-role">Developer · Builder · Explorer</div>
+          <div class="card-line"></div>
+          <div class="card-meta">
+            <span>Based online</span>
+            <span>● Available</span>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="about" class="section split">
-      <div>
-        <p class="section-kicker">01 / ABOUT</p>
-        <h2>持续学习，持续构建。</h2>
-      </div>
-      <div class="about-copy">
-        <p>
-          我关注的不只是“代码能不能跑”，而是一个想法如何从需求、设计、
-          开发一直走到真正上线。
-        </p>
-        <p>
-          我的兴趣覆盖 Web、后端服务、API、自动化与 AI 应用。
-          这个网站也会随着新的项目和实验持续更新。
-        </p>
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <div class="section-heading">
+      <section id="about" class="section split">
         <div>
-          <p class="section-kicker">02 / PROJECTS</p>
-          <h2>正在构建的东西</h2>
+          <p class="section-kicker">01 / ABOUT</p>
+          <h2>持续学习，持续构建。</h2>
         </div>
-        <span class="section-note">Selected work / Experiments</span>
-      </div>
+        <div class="about-copy">
+          <p>
+            我关注的不只是“代码能不能跑”，而是一个想法如何从需求、设计、
+            开发一直走到真正上线。
+          </p>
+          <p>
+            我的兴趣覆盖 Web、后端服务、API、自动化与 AI 应用。
+            这个网站也会随着新的项目和实验持续更新。
+          </p>
+        </div>
+      </section>
 
-      <div class="project-grid">
-        <article class="project-card featured">
-          <div class="project-top">
-            <span class="project-number">01</span>
-            <span class="tag">WEB</span>
+      <section id="projects" class="section">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">02 / PROJECTS</p>
+            <h2>正在构建的东西</h2>
           </div>
-          <h3>Web Projects</h3>
-          <p>从前端页面到后端服务，构建简洁、稳定、可维护的 Web 应用。</p>
-          <div class="project-footer">
-            <span>HTML · CSS · JavaScript</span>
-            <span>↗</span>
-          </div>
-        </article>
+          <span class="section-note">Selected work / Experiments</span>
+        </div>
 
-        <article class="project-card">
-          <div class="project-top">
-            <span class="project-number">02</span>
-            <span class="tag">AI</span>
-          </div>
-          <h3>AI Experiments</h3>
-          <p>探索 AI 模型、自动化工作流与实际应用，把模型能力转化为可用工具。</p>
-          <div class="project-footer">
-            <span>AI · Automation</span>
-            <span>↗</span>
-          </div>
-        </article>
+        <div class="project-grid">
+          <article class="project-card featured">
+            <div class="project-top">
+              <span class="project-number">01</span>
+              <span class="tag">WEB</span>
+            </div>
+            <h3>Web Projects</h3>
+            <p>从前端页面到后端服务，构建简洁、稳定、可维护的 Web 应用。</p>
+            <div class="project-footer">
+              <span>HTML · CSS · JavaScript</span>
+              <span>↗</span>
+            </div>
+          </article>
 
-        <article class="project-card">
-          <div class="project-top">
-            <span class="project-number">03</span>
-            <span class="tag">SYSTEM</span>
-          </div>
-          <h3>System & API</h3>
-          <p>关注系统之间的数据流、接口设计和自动化，让不同工具真正连接起来。</p>
-          <div class="project-footer">
-            <span>API · Backend · Integration</span>
-            <span>↗</span>
-          </div>
-        </article>
-      </div>
-    </section>
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-number">02</span>
+              <span class="tag">AI</span>
+            </div>
+            <h3>AI Experiments</h3>
+            <p>
+              探索 AI 模型、自动化工作流与实际应用，把模型能力转化为可用工具。
+            </p>
+            <div class="project-footer">
+              <span>AI · Automation</span>
+              <span>↗</span>
+            </div>
+          </article>
 
-    <section id="skills" class="section">
-      <div class="section-heading">
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-number">03</span>
+              <span class="tag">SYSTEM</span>
+            </div>
+            <h3>System & API</h3>
+            <p>
+              关注系统之间的数据流、接口设计和自动化，让不同工具真正连接起来。
+            </p>
+            <div class="project-footer">
+              <span>API · Backend · Integration</span>
+              <span>↗</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">03 / SKILLS</p>
+            <h2>我的工具箱</h2>
+          </div>
+        </div>
+
+        <div class="skills">
+          <div class="skill-row">
+            <span>01</span><strong>Frontend</strong
+            ><em>HTML / CSS / JavaScript</em>
+          </div>
+          <div class="skill-row">
+            <span>02</span><strong>Backend</strong
+            ><em>Services / Databases / APIs</em>
+          </div>
+          <div class="skill-row">
+            <span>03</span><strong>AI & Automation</strong
+            ><em>Models / Workflows / Tools</em>
+          </div>
+          <div class="skill-row">
+            <span>04</span><strong>Engineering</strong
+            ><em>Git / GitHub / Deployment</em>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
         <div>
-          <p class="section-kicker">03 / SKILLS</p>
-          <h2>我的工具箱</h2>
+          <p class="section-kicker">04 / CONTACT</p>
+          <h2>有想法？<br /><span>一起把它做出来。</span></h2>
         </div>
-      </div>
+        <div class="contact-side">
+          <p>欢迎通过 GitHub 联系我，也欢迎交流技术、项目和有趣的想法。</p>
+          <a
+            class="contact-link"
+            href="https://github.com/Suian13"
+            target="_blank"
+            rel="noreferrer"
+          >
+            github.com/Suian13 <span>↗</span>
+          </a>
+        </div>
+      </section>
+    </main>
 
-      <div class="skills">
-        <div class="skill-row"><span>01</span><strong>Frontend</strong><em>HTML / CSS / JavaScript</em></div>
-        <div class="skill-row"><span>02</span><strong>Backend</strong><em>Services / Databases / APIs</em></div>
-        <div class="skill-row"><span>03</span><strong>AI & Automation</strong><em>Models / Workflows / Tools</em></div>
-        <div class="skill-row"><span>04</span><strong>Engineering</strong><em>Git / GitHub / Deployment</em></div>
-      </div>
-    </section>
+    <footer class="footer">
+      <span>© <span id="year"></span> Huihui</span>
+      <span>Built with HTML · CSS · JavaScript</span>
+    </footer>
 
-    <section id="contact" class="section contact">
-      <div>
-        <p class="section-kicker">04 / CONTACT</p>
-        <h2>有想法？<br><span>一起把它做出来。</span></h2>
-      </div>
-      <div class="contact-side">
-        <p>欢迎通过 GitHub 联系我，也欢迎交流技术、项目和有趣的想法。</p>
-        <a class="contact-link" href="https://github.com/Suian13" target="_blank" rel="noreferrer">
-          github.com/Suian13 <span>↗</span>
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <span>© <span id="year"></span> Huihui</span>
-    <span>Built with HTML · CSS · JavaScript</span>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
