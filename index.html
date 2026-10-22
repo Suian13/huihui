@@ -29,7 +29,7 @@
   </header>
 
   <main id="top">
-    <section class="hero section">
+    <section class="hero section" data-hero>
       <div class="hero-copy">
         <p class="eyebrow"><span class="pulse"></span> HELLO, WORLD</p>
         <h1>把想法，<br><span>做成真正能用的东西。</span></h1>
@@ -43,16 +43,23 @@
         </div>
       </div>
 
-      <div class="hero-card" aria-label="个人简介卡片">
-        <div class="orb orb-one"></div>
-        <div class="orb orb-two"></div>
-        <div class="avatar">H</div>
-        <div class="card-name">Huihui</div>
-        <div class="card-role">Developer · Builder · Explorer</div>
-        <div class="card-line"></div>
-        <div class="card-meta">
-          <span>Based online</span>
-          <span>● Available</span>
+      <div class="hero-visual" data-hero-visual aria-label="Huihui 个人简介">
+        <div class="hero-light" aria-hidden="true"></div>
+        <div class="hero-particles" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div class="hero-character-stage">
+          <div class="hero-character-parallax" data-character-parallax>
+            <div class="hero-character-float">
+              <!-- Replace the monogram with the supplied transparent portrait when available.
+                   Use class="hero-character", intrinsic width/height, a descriptive alt,
+                   decoding="async" and fetchpriority="high". Do not lazy-load the hero. -->
+              <div class="hero-monogram" aria-hidden="true">H</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-signature">
+          <div class="card-name">Huihui</div>
+          <div class="card-role">Developer · Builder · Explorer</div>
+          <div class="card-meta"><span>Based online</span><span>● Available</span></div>
         </div>
       </div>
     </section>
