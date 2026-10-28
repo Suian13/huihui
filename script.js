@@ -8,11 +8,16 @@ const portrait = document.querySelector("[data-character-parallax]");
 if (hero && visual && portrait) {
   const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const pointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+  const toggle = document.querySelector("[data-motion-toggle]");
+  const state = document.querySelector("[data-motion-state]");
+  // A deliberate choice overrides the system preference for this visit only.
+  let choice = null;
+  const motionEnabled = () => choice ?? !motion.matches;
   let visible = true;
   let frame = 0;
   let position = null;
 
-  const enabled = () => !motion.matches && pointer.matches && visible && !document.hidden;
+  const enabled = () => motionEnabled() && pointer.matches && visible && !document.hidden;
   const reset = () => {
     cancelAnimationFrame(frame);
     frame = 0;
@@ -25,7 +30,18 @@ if (hero && visual && portrait) {
     visual.style.setProperty("--light-y", "0px");
   };
   const sync = () => {
-    hero.classList.toggle("is-paused", motion.matches || !visible || document.hidden);
+    const active = motionEnabled();
+    hero.classList.toggle("motion-enabled", active);
+    hero.classList.toggle("motion-disabled", !active);
+    hero.classList.toggle("is-paused", !active || !visible || document.hidden);
+    if (toggle) {
+      toggle.hidden = false;
+      toggle.setAttribute("aria-pressed", String(active));
+      toggle.title = choice === null && motion.matches
+        ? "已跟随系统减少动画，可点击主动开启"
+        : "切换人物浮动、光效和鼠标跟随";
+    }
+    if (state) state.textContent = active ? "已开启" : "已关闭";
     if (!enabled()) reset();
   };
   const render = () => {
@@ -51,6 +67,10 @@ if (hero && visual && portrait) {
   }, { passive: true });
   hero.addEventListener("pointerleave", reset);
   hero.addEventListener("pointercancel", reset);
+  toggle?.addEventListener("click", () => {
+    choice = !motionEnabled();
+    sync();
+  });
   motion.addEventListener("change", sync);
   pointer.addEventListener("change", sync);
   document.addEventListener("visibilitychange", sync);

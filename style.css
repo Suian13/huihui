@@ -335,8 +335,8 @@ h2 { font-size: clamp(38px, 5vw, 62px); line-height: 1.08; letter-spacing: -.055
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .hero-character-stage, .hero-character-float, .hero-particles i { animation: none; }
-  .hero-character-parallax, .hero-light { transform: none; transition: none; }
+  .hero:not(.motion-enabled) .hero-character-stage, .hero:not(.motion-enabled) .hero-character-float, .hero:not(.motion-enabled) .hero-particles i { animation: none; }
+  .hero:not(.motion-enabled) .hero-character-parallax, .hero:not(.motion-enabled) .hero-light { transform: none; transition: none; }
   .button, .project-card { transition: none; }
   .button:hover, .project-card:hover { transform: none; }
 }
@@ -431,6 +431,29 @@ h2 { font-size: clamp(38px, 5vw, 62px); line-height: 1.08; letter-spacing: -.055
   .hero-trait:nth-child(3) { left: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .hero-trait, .hero-light::before { animation: none; }
-  .hero-traits { transform: none; transition: none; }
+  .hero:not(.motion-enabled) .hero-trait, .hero:not(.motion-enabled) .hero-light::before { animation: none; }
+  .hero:not(.motion-enabled) .hero-traits { transform: none; transition: none; }
 }
+
+/* Respect the system by default; allow an explicit, accessible per-visit choice. */
+.motion-toggle {
+  display: inline-flex; align-items: center; gap: 8px;
+  min-height: 44px; margin-top: 14px; padding: 8px 12px;
+  border: 1px solid var(--line); border-radius: 999px;
+  background: rgba(17,23,39,.5); color: var(--muted);
+  font: inherit; font-size: 12px; cursor: pointer;
+}
+.motion-toggle[hidden] { display: none; }
+.motion-toggle [data-motion-state] { color: var(--text); }
+.motion-toggle-dot { width: 6px; height: 6px; border-radius: 50%; background: #69748c; }
+.motion-toggle[aria-pressed="true"] .motion-toggle-dot { background: var(--accent-2); box-shadow: 0 0 10px rgba(94,231,255,.5); }
+.motion-toggle:hover { border-color: rgba(139,124,255,.55); }
+.motion-toggle:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 4px; }
+.hero.motion-disabled .hero-character-stage,
+.hero.motion-disabled .hero-character-float,
+.hero.motion-disabled .hero-particles i,
+.hero.motion-disabled .hero-trait,
+.hero.motion-disabled .hero-light::before { animation: none; }
+.hero.motion-disabled .hero-character-parallax,
+.hero.motion-disabled .hero-light,
+.hero.motion-disabled .hero-traits { transform: none; transition: none; }
